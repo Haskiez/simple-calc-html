@@ -1,21 +1,3 @@
-document.onreadystatechange = function() {
-    if (document.readyState = "interactive") {
-        
-    }
-}
-
-function add(x, y) {
-    return x + y;
-}
-
-function subtract(x, y) {
-    return x - y;
-}
-
-function multiply(x, y) {
-    return x * y;
-}
-
 function multiplyStuff(){
    var valueA =  $.trim(document.getElementById("a").value);
    var valueB = $.trim(document.getElementById("b").value);
