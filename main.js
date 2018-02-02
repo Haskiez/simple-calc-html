@@ -1,4 +1,8 @@
-
+document.onreadystatechange = function() {
+    if (document.readyState = "interactive") {
+        
+    }
+}
 
 function add(x, y) {
     return x + y;
