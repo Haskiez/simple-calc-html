@@ -34,6 +34,28 @@ function multiplyStuff(){
         window.alert("You need to enter a valid number");
    }
 }
+function modStuff(){
+    var valueA =  $.trim(document.getElementById("a").value);
+    var valueB = $.trim(document.getElementById("b").value);
+ 
+    if(!isNaN(valueA) && !isNaN(valueB))
+    {
+        if(valueA === "" || valueB === "")
+        {
+            window.alert("You have to submit a value");
+        }
+        else if(valueB === "0")
+        {
+            window.alert("Mod zero is undefined");
+        }
+        else{
+            document.getElementById("answer").value = valueA % valueB;
+        }
+    }
+    else{
+        window.alert("You need to enter a valid number");
+    }
+ }
 function addStuff(){
     var valueA =  $.trim(document.getElementById("a").value);
     var valueB = $.trim(document.getElementById("b").value);
