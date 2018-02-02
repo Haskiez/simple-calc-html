@@ -15,3 +15,16 @@ function subtract(x, y) {
 function multiply(x, y) {
     return x * y;
 }
+
+function multiplyStuff(){
+   var valueA =  document.getElementById("a").value;
+   var valueB = document.getElementById("b").value;
+
+   if(valueA === "" || valueB === "" || valueA === " " || valueB === " ")
+   {
+       window.alert("You have to submit a value");
+   }
+   else{
+       document.getElementById("answer").value = valueA * valueB;
+   }
+}
