@@ -17,48 +17,58 @@ function multiply(x, y) {
 }
 
 function multiplyStuff(){
-   var valueA =  document.getElementById("a").value;
-   var valueB = document.getElementById("b").value;
+   var valueA =  $.trim(document.getElementById("a").value);
+   var valueB = $.trim(document.getElementById("b").value);
 
-   if(valueA === "" || valueB === "" || valueA === " " || valueB === " ")
+   if(valueA === "" || valueB === "")
    {
        window.alert("You have to submit a value");
    }
    else{
-       document.getElementById("answer").value = valueA * valueB;
+       document.getElementById("answer").value = multiply(valueA, valueB);
    }
 }
 function addStuff(){
-    var valueA =  document.getElementById("a").value;
-    var valueB = document.getElementById("b").value;
- 
-    if(valueA === "" || valueB === "" || valueA === " " || valueB === " ")
+    var valueA =  $.trim(document.getElementById("a").value);
+    var valueB = $.trim(document.getElementById("b").value);
+    console.log(!isNaN(valueA));
+    if(!isNaN(valueA) && !isNaN(valueB))
     {
-        window.alert("You have to submit a value");
+        if(valueA === "" || valueB === "")
+        {
+            window.alert("You have to submit a value");
+        }
+        else{
+            document.getElementById("answer").value = add(parseFloat(valueA), parseFloat(valueB));
+        }
     }
     else{
-        document.getElementById("answer").value = parseFloat(valueA) + parseFloat(valueB);
+        window.alert("You need to enter a valid number");
     }
  }
  function subtractStuff(){
-    var valueA =  document.getElementById("a").value;
-    var valueB = document.getElementById("b").value;
+    var valueA =  $.trim(document.getElementById("a").value);
+    var valueB = $.trim(document.getElementById("b").value);
  
-    if(valueA === "" || valueB === "" || valueA === " " || valueB === " ")
+    if(valueA === "" || valueB === "")
     {
         window.alert("You have to submit a value");
     }
     else{
-        document.getElementById("answer").value = valueA - valueB;
+        document.getElementById("answer").value = subtract(valueA, valueB);
     }
  }
  function divideStuff(){
-    var valueA =  document.getElementById("a").value;
-    var valueB = document.getElementById("b").value;
+    var valueA =  $.trim(document.getElementById("a").value);
+    var valueB = $.trim(document.getElementById("b").value);
  
-    if(valueA === "" || valueB === "" || valueA === " " || valueB === " ")
+    if(valueA === "" || valueB === "")
     {
         window.alert("You have to submit a value");
+    }
+    else if(valueB === "0")
+    {
+        window.alert("Dividing by zero is undefined");
     }
     else{
         document.getElementById("answer").value = valueA / valueB;

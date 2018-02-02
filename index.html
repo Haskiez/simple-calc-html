@@ -4,22 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Quick Calc</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script
+        src="http://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous">
+    </script>
 
 </head>
 
 <body>
-<div></div>
-<h1>Quick Adder</h1>
-<br>
-A: <input type="text" id="a">  B: <input type="text" id="b">
-<br>
-<input type="button" id="add" value="Add" onclick="addStuff()">
-<input type="button" id="subtract" value="subtract" onclick="subtractStuff()">
-<input type="button" id= "multiple" value="Multiply" onclick="multiplyStuff()">
-<input type="button" id="divide" value="Divide" onclick="divideStuff()">
-<br>
-Answer: <input type="text" id="answer">
+<div class="container text-center">
+    <h1>Simple Calculator</h1>
+    <br>
+    <div class="row">
+        <div class="form-group">
+            <center><input type="text" style="width: 35%" id="a" class="form-control" placeholder="Number A"></center>
+        </div>
+        <div class="form-group">
+            <center><input type="text" style="width: 35%" id="b" class="form-control" placeholder="Number B"></center>
+        </div>
+        <input type="button" class="btn btn-primary" id="add" value="Add" onclick="addStuff()">
+        <input type="button" class="btn btn-warning" id="subtract" value="Subtract" onclick="subtractStuff()">
+        <input type="button" class="btn btn-success" id= "multiple" value="Multiply" onclick="multiplyStuff()">
+        <input type="button" class="btn btn-danger" id="divide" value="Divide" onclick="divideStuff()">
+        <br><br>
+        <div class="form-group">
+            <center><input type="text" id="answer" style="width: 35%" placeholder="Your answer" class="form-control" disabled></center>
+        </div>
+    </div>
 </div>
 
 </body>
