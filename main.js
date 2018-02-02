@@ -20,12 +20,18 @@ function multiplyStuff(){
    var valueA =  $.trim(document.getElementById("a").value);
    var valueB = $.trim(document.getElementById("b").value);
 
-   if(valueA === "" || valueB === "")
+   if(!isNaN(valueA) && !isNaN(valueB))
    {
-       window.alert("You have to submit a value");
+        if(valueA === "" || valueB === "")
+        {
+            window.alert("You have to submit a value");
+        }
+        else{
+            document.getElementById("answer").value = multiply(valueA, valueB);
+        }
    }
    else{
-       document.getElementById("answer").value = multiply(valueA, valueB);
+        window.alert("You need to enter a valid number");
    }
 }
 function addStuff(){
@@ -50,27 +56,39 @@ function addStuff(){
     var valueA =  $.trim(document.getElementById("a").value);
     var valueB = $.trim(document.getElementById("b").value);
  
-    if(valueA === "" || valueB === "")
+    if(!isNaN(valueA) && !isNaN(valueB))
     {
-        window.alert("You have to submit a value");
+        if(valueA === "" || valueB === "")
+        {
+            window.alert("You have to submit a value");
+        }
+        else{
+            document.getElementById("answer").value = subtract(valueA, valueB);
+        }
     }
     else{
-        document.getElementById("answer").value = subtract(valueA, valueB);
+        window.alert("You need to enter a valid number");
     }
  }
  function divideStuff(){
     var valueA =  $.trim(document.getElementById("a").value);
     var valueB = $.trim(document.getElementById("b").value);
  
-    if(valueA === "" || valueB === "")
+    if(!isNaN(valueA) && !isNaN(valueB))
     {
-        window.alert("You have to submit a value");
-    }
-    else if(valueB === "0")
-    {
-        window.alert("Dividing by zero is undefined");
+        if(valueA === "" || valueB === "")
+        {
+            window.alert("You have to submit a value");
+        }
+        else if(valueB === "0")
+        {
+            window.alert("Dividing by zero is undefined");
+        }
+        else{
+            document.getElementById("answer").value = valueA / valueB;
+        }
     }
     else{
-        document.getElementById("answer").value = valueA / valueB;
+        window.alert("You need to enter a valid number");
     }
  }
