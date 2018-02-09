@@ -9,7 +9,7 @@ function multiplyStuff(){
             window.alert("You have to submit a value");
         }
         else{
-            document.getElementById("answer").value = multiply(valueA, valueB);
+            document.getElementById("answer").value = valueA * valueB;
         }
    }
    else{
@@ -41,7 +41,6 @@ function modStuff(){
 function addStuff(){
     var valueA =  $.trim(document.getElementById("a").value);
     var valueB = $.trim(document.getElementById("b").value);
-    console.log(!isNaN(valueA));
     if(!isNaN(valueA) && !isNaN(valueB))
     {
         if(valueA === "" || valueB === "")
@@ -49,7 +48,7 @@ function addStuff(){
             window.alert("You have to submit a value");
         }
         else{
-            document.getElementById("answer").value = add(parseFloat(valueA), parseFloat(valueB));
+            document.getElementById("answer").value = parseFloat(valueA) +  parseFloat(valueB);
         }
     }
     else{
@@ -67,7 +66,7 @@ function addStuff(){
             window.alert("You have to submit a value");
         }
         else{
-            document.getElementById("answer").value = subtract(valueA, valueB);
+            document.getElementById("answer").value = valueA - valueB;
         }
     }
     else{
